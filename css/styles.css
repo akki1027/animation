@@ -21,7 +21,7 @@ body {
   background: skyblue;
 } */
 
-.box {
+/* .box {
   width: 100px;
   height: 100px;
   background: orange;
@@ -37,5 +37,43 @@ body {
   }
   100% {
     transform: translateX(300px) rotate(360deg);
+  }
+} */
+
+.message {
+  width: 300px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+  background: #2c2c2c;
+  color: #ddd;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+
+  animation: popup 2s forwards;
+  /* display: none; */
+  visibility: hidden;
+}
+
+@keyframes popup {
+  0% {
+    transform: translateY(20px);
+    visibility: visible;
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  20%, 80% {
+    transform: none;
+    opacity: 1;
+  }
+  /* 80% {
+    transform: none;
+    opacity: 1;
+  } */
+  100% {
+    transform: translateY(20px);
+    visibility: hidden;
+    opacity: 0;
   }
 }
